@@ -65,7 +65,7 @@
     
     calc = 1;
     
-    self.Go_Calc;
+    [self Go_Calc];
 
 }
 
@@ -73,7 +73,7 @@
     
     calc = 2;
 
-    self.Go_Calc;
+    [self Go_Calc];
 
 }
 
@@ -81,7 +81,7 @@
     
     calc = 3;
 
-    self.Go_Calc;
+    [self Go_Calc];
 
 }
 
@@ -89,7 +89,7 @@
     
     calc = 4;
 
-    self.Go_Calc;
+    [self Go_Calc];
 
 }
 
@@ -276,7 +276,7 @@
 
     input_num = 0;
     
-    self.Go_Number;
+    [self Go_Number];
 
 }
 
@@ -284,7 +284,7 @@
 
     input_num = 1;
     
-    self.Go_Number;
+    [self Go_Number];
 
 }
 
@@ -292,7 +292,7 @@
 
     input_num = 2;
     
-    self.Go_Number;
+    [self Go_Number];
 
 }
 
@@ -300,7 +300,7 @@
 
     input_num = 3;
     
-    self.Go_Number;
+    [self Go_Number];
 
 }
 
@@ -308,7 +308,7 @@
 
     input_num = 4;
     
-    self.Go_Number;
+    [self Go_Number];
 
 }
 
@@ -316,7 +316,7 @@
 
     input_num = 5;
     
-    self.Go_Number;
+    [self Go_Number];
 
 }
 
@@ -324,7 +324,7 @@
 
     input_num = 6;
     
-    self.Go_Number;
+    [self Go_Number];
 
 }
 
@@ -332,7 +332,7 @@
 
     input_num = 7;
     
-    self.Go_Number;
+    [self Go_Number];
 
 }
 
@@ -340,7 +340,7 @@
 
     input_num = 8;
     
-    self.Go_Number;
+    [self Go_Number];
 
 }
 
@@ -348,7 +348,7 @@
 
     input_num = 9;
     
-    self.Go_Number;
+    [self Go_Number];
 
 }
 
@@ -400,18 +400,18 @@
 
 
 - (IBAction)addPoint:(id)sender {
-    
-    if(first_flg == 1){
         
-        if(point_flg == 1){
+    if(point_flg == 1){
+        
+        if(first_flg == 1){
             
             point_flg = false;
-            
-        }else{
-            
-            point_flg = true;
-            
+        
         }
+            
+    }else{
+        
+        point_flg = true;
         
     }
     
