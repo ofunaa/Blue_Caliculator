@@ -21,9 +21,9 @@
     int calc;
     int before_calc;
     
-    Boolean first_flg;
+    BOOL first_flg;
     
-    Boolean point_flg;
+    BOOL point_flg;
     
     int point_count;
 
@@ -45,9 +45,9 @@
     
     calc = 0;
     
-    first_flg = true;
+    first_flg = YES;
     
-    point_flg = false;
+    point_flg = NO;
     
     point_count = 1;
 
@@ -121,9 +121,9 @@
     
     before_calc = calc;
     
-    first_flg = true;
+    first_flg = YES;
     
-    point_flg = false;
+    point_flg = NO;
     
     point_count = 1;
     
@@ -185,9 +185,9 @@
     
     calc = 0;
     
-    first_flg = true;
+    first_flg = YES;
     
-    point_flg = false;
+    point_flg = NO;
     
     point_count = 1;
 
@@ -239,7 +239,7 @@
 
 - (IBAction)clear:(id)sender {
     
-    first_flg = true;
+    first_flg = YES;
     
     halfway_total = 0;
     
@@ -285,7 +285,7 @@
             
             _answer_label.text = input_total_string;
             
-            first_flg = false;
+            first_flg = NO;
             
         }
         
@@ -315,13 +315,13 @@
         
         if(first_flg == 1){
             
-            point_flg = false;
+            point_flg = NO;
         
         }
             
     }else{
         
-        point_flg = true;
+        point_flg = YES;
         
     }
     
