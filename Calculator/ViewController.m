@@ -61,37 +61,17 @@
 
 #pragma mark caliculate
 
-- (IBAction)division:(id)sender {
+
+- (IBAction)tapButton_calc:(id)sender{
     
-    calc = 1;
+    UIButton *button = (UIButton *)sender;
+    
+    calc = button.tag;
     
     [self Go_Calc];
-
-}
-
-- (IBAction)multiplication:(id)sender {
     
-    calc = 2;
-
-    [self Go_Calc];
-
 }
 
-- (IBAction)minus:(id)sender {
-    
-    calc = 3;
-
-    [self Go_Calc];
-
-}
-
-- (IBAction)plus:(id)sender {
-    
-    calc = 4;
-
-    [self Go_Calc];
-
-}
 
 - (void)Go_Calc{
     
@@ -272,85 +252,15 @@
 
 #pragma mark Number
 
-- (IBAction)zero:(id)sender {
-
-    input_num = 0;
+- (IBAction)tapButton:(id)sender{
+    
+    UIButton *button = (UIButton *)sender;
+    
+    input_num = button.tag;
     
     [self Go_Number];
-
 }
 
-- (IBAction)one:(id)sender {
-
-    input_num = 1;
-    
-    [self Go_Number];
-
-}
-
-- (IBAction)two:(id)sender {
-
-    input_num = 2;
-    
-    [self Go_Number];
-
-}
-
-- (IBAction)three:(id)sender {
-
-    input_num = 3;
-    
-    [self Go_Number];
-
-}
-
-- (IBAction)four:(id)sender {
-
-    input_num = 4;
-    
-    [self Go_Number];
-
-}
-
-- (IBAction)five:(id)sender {
-
-    input_num = 5;
-    
-    [self Go_Number];
-
-}
-
-- (IBAction)six:(id)sender {
-
-    input_num = 6;
-    
-    [self Go_Number];
-
-}
-
-- (IBAction)seven:(id)sender {
-
-    input_num = 7;
-    
-    [self Go_Number];
-
-}
-
-- (IBAction)eight:(id)sender {
-
-    input_num = 8;
-    
-    [self Go_Number];
-
-}
-
-- (IBAction)nine:(id)sender {
-
-    input_num = 9;
-    
-    [self Go_Number];
-
-}
 
 - (void)Go_Number{
     
