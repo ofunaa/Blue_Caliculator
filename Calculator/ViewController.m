@@ -85,15 +85,47 @@
                 
             case 1: //割り算
                 
-                halfway_total = halfway_total / input_total;
+                if (input_total == 0) {
+                    
+                    first_flg = YES;
+                    
+                    halfway_total = 0;
+                    
+                    input_total = 0;
+                    
+                    _answer_label.text = @"0";
+                    
+                    break;
+                    
+                }else{
                 
-                break;
+                    halfway_total = halfway_total / input_total;
+                
+                    break;
+                    
+                }
                 
             case 2: //かけ算
                 
-                halfway_total = halfway_total * input_total;
+                if (input_total == 0) {
+                    
+                    first_flg = YES;
+                    
+                    halfway_total = 0;
+                    
+                    input_total = 0;
+                    
+                    _answer_label.text = @"0";
+                    
+                    break;
+                    
+                }else{
                 
-                break;
+                    halfway_total = halfway_total * input_total;
+                
+                    break;
+                    
+                }
                 
             case 3: //引き算
                 
@@ -147,15 +179,47 @@
                 
             case 1: //割り算
                 
-                halfway_total = halfway_total / input_total;
+                if (input_total == 0) {
+                    
+                    first_flg = YES;
+                    
+                    halfway_total = 0;
+                    
+                    input_total = 0;
+                    
+                    _answer_label.text = @"0";
+                    
+                    break;
+                    
+                }else{
                 
-                break;
+                    halfway_total = halfway_total / input_total;
+                
+                    break;
+                    
+                }
                 
             case 2: //かけ算
                 
-                halfway_total = halfway_total * input_total;
+                if (input_total == 0) {
+                    
+                    first_flg = YES;
+                    
+                    halfway_total = 0;
+                    
+                    input_total = 0;
+                    
+                    _answer_label.text = @"0";
+                    
+                    break;
+                   
+                }else{
+                    
+                    halfway_total = halfway_total * input_total;
+                    
+                    break;
                 
-                break;
+                }
                 
             case 3: //引き算
                 
