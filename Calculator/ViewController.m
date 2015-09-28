@@ -219,19 +219,27 @@
     
     if(halfway_total){
         
-        halfway_total = halfway_total * -1;
+        if (halfway_total != 0) {
         
-        NSString *halfway_total_string = [NSString stringWithFormat:@"%f", halfway_total];
+            halfway_total = halfway_total * -1;
         
-        _answer_label.text = halfway_total_string;
+            NSString *halfway_total_string = [NSString stringWithFormat:@"%f", halfway_total];
         
+            _answer_label.text = halfway_total_string;
+        
+        }
+            
     }else{
         
-        input_total = input_total * -1;
+        if (input_total != 0){
         
-        NSString *input_total_string = [NSString stringWithFormat:@"%f", input_total];
+            input_total = input_total * -1;
         
-        _answer_label.text = input_total_string;
+            NSString *input_total_string = [NSString stringWithFormat:@"%f", input_total];
+        
+            _answer_label.text = input_total_string;
+            
+        }
         
     }
     
