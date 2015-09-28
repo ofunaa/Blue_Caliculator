@@ -26,6 +26,8 @@
     BOOL point_flg;
     
     int point_count;
+    
+    NSString *halfway_total_string;
 
 }
 
@@ -159,9 +161,9 @@
     
     point_count = 1;
     
-    NSString *halfway_total_string = [NSString stringWithFormat:@"%f", halfway_total];
+    NSString * output_string = [self castNum:halfway_total];
     
-    _answer_label.text = halfway_total_string;
+    _answer_label.text = output_string;
 
 }
 
@@ -241,9 +243,9 @@
     
     }
     
-    NSString *halfway_total_string = [NSString stringWithFormat:@"%f", halfway_total];
+    NSString * output_string = [self castNum:halfway_total];
     
-    _answer_label.text = halfway_total_string;
+    _answer_label.text = output_string;
     
     before_calc = 0;
     
@@ -263,17 +265,17 @@
         
         halfway_total = halfway_total * 0.01;
         
-        NSString *halfway_total_string = [NSString stringWithFormat:@"%f", halfway_total];
+        NSString * output_string = [self castNum:halfway_total];
         
-        _answer_label.text = halfway_total_string;
+        _answer_label.text = output_string;
         
     }else{
         
         input_total = input_total * 0.01;
         
-        NSString *input_total_string = [NSString stringWithFormat:@"%f", input_total];
+        NSString * output_string = [self castNum_input:input_total];
         
-        _answer_label.text = input_total_string;
+        _answer_label.text = output_string;
         
     }
     
@@ -287,9 +289,9 @@
         
             halfway_total = halfway_total * -1;
         
-            NSString *halfway_total_string = [NSString stringWithFormat:@"%f", halfway_total];
-        
-            _answer_label.text = halfway_total_string;
+            NSString * output_string = [self castNum:halfway_total];
+            
+            _answer_label.text = output_string;
         
         }
             
@@ -299,9 +301,9 @@
         
             input_total = input_total * -1;
         
-            NSString *input_total_string = [NSString stringWithFormat:@"%f", input_total];
-        
-            _answer_label.text = input_total_string;
+            NSString * output_string = [self castNum_input:input_total];
+            
+            _answer_label.text = output_string;
             
         }
         
@@ -344,18 +346,18 @@
             
             input_total += input_num;
             
-            NSString *input_total_string = [NSString stringWithFormat:@"%f", input_total];
+            NSString * output_string = [self castNum_input:input_total];
             
-            _answer_label.text = input_total_string;
+            _answer_label.text = output_string;
             
             
         }else{
             
             input_total = input_num;
             
-            NSString *input_total_string = [NSString stringWithFormat:@"%f", input_total];
+            NSString * output_string = [self castNum_input:input_total];
             
-            _answer_label.text = input_total_string;
+            _answer_label.text = output_string;
             
             first_flg = NO;
             
@@ -366,10 +368,11 @@
         float point_count_num = pow(0.1, point_count);
             
         input_total += input_num * point_count_num;
+        
             
-        NSString *input_total_string = [NSString stringWithFormat:@"%f", input_total];
-            
-        _answer_label.text = input_total_string;
+        NSString * output_string = [self castNum_input:input_total];
+        
+        _answer_label.text = output_string;
         
         point_count += 1;
         
@@ -397,6 +400,42 @@
         
     }
     
+}
+
+- (NSString *)castNum:(float)inputNum{
+    
+    float cast_Num = inputNum - (int)inputNum;
+    
+    if(cast_Num > 0.0000000001){
+        
+        //floatのまま表示する
+        halfway_total_string = [NSString stringWithFormat:@"%f", inputNum];
+        return halfway_total_string;
+        
+    }else{
+        
+        //intにキャストする
+        halfway_total_string = [NSString stringWithFormat:@"%d", (int)inputNum];
+        return halfway_total_string;
+        
+    }
+}
+
+- (NSString *)castNum_input:(float)inputNum{
+    
+    if(inputNum > 0.0000000001){
+        
+        //floatのまま表示する
+        halfway_total_string = [NSString stringWithFormat:@"%f", inputNum];
+        return halfway_total_string;
+        
+    }else{
+        
+        //intにキャストする
+        halfway_total_string = [NSString stringWithFormat:@"%d", (int)inputNum];
+        return halfway_total_string;
+        
+    }
 }
 
 
